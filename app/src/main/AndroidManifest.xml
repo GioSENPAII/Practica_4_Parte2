@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.memoripy">
+
+    <!-- Permisos para exportar partidas al almacenamiento externo -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MemorIPN">
+
+        <!-- Actividad principal -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Actividad del juego -->
+        <activity
+            android:name=".GameActivity"
+            android:configChanges="orientation|screenSize" />
+
+        <!-- Actividad de configuración -->
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/settings" />
+
+        <!-- Actividad de partidas guardadas -->
+        <activity
+            android:name=".SavedGamesActivity"
+            android:label="@string/saved_games" />
+
+        <!-- Actividad para visualizar archivos de partidas -->
+        <activity
+            android:name=".GameViewerActivity"
+            android:label="@string/game_file_content" />
+    </application>
+
+</manifest>

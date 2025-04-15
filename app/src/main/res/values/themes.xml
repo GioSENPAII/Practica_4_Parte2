@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tema base para toda la aplicación -->
+    <style name="Theme.MemorIPN" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Atributos comunes -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+    </style>
+
+    <!-- Tema Guinda (IPN) - Modo Claro -->
+    <style name="Theme.MemorIPN.Guinda.Light" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/guinda_primary</item>
+        <item name="colorPrimaryVariant">@color/guinda_primary_variant</item>
+        <item name="colorOnPrimary">@color/guinda_on_primary</item>
+        <item name="colorSecondary">@color/guinda_secondary</item>
+        <item name="colorOnSecondary">@color/guinda_on_secondary</item>
+        <item name="android:colorBackground">@color/guinda_background</item>
+        <item name="colorSurface">@color/guinda_surface</item>
+        <item name="colorOnBackground">@color/guinda_on_background</item>
+        <item name="colorOnSurface">@color/guinda_on_surface</item>
+        <item name="colorError">@color/guinda_error</item>
+
+        <item name="android:statusBarColor">@color/guinda_primary_variant</item>
+        <item name="android:windowLightStatusBar">false</item>
+
+        <!-- Colores específicos del juego -->
+        <item name="cardBackColor">@color/card_back</item>
+        <item name="matchedCardColor">@color/matched_card</item>
+        <item name="wrongMatchColor">@color/wrong_match</item>
+    </style>
+
+    <!-- Tema Guinda (IPN) - Modo Oscuro -->
+    <style name="Theme.MemorIPN.Guinda.Dark" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/guinda_primary_dark</item>
+        <item name="colorPrimaryVariant">@color/guinda_primary_variant_dark</item>
+        <item name="colorOnPrimary">@color/guinda_on_primary_dark</item>
+        <item name="colorSecondary">@color/guinda_secondary_dark</item>
+        <item name="colorOnSecondary">@color/guinda_on_secondary_dark</item>
+        <item name="android:colorBackground">@color/guinda_background_dark</item>
+        <item name="colorSurface">@color/guinda_surface_dark</item>
+        <item name="colorOnBackground">@color/guinda_on_background_dark</item>
+        <item name="colorOnSurface">@color/guinda_on_surface_dark</item>
+
+        <item name="android:statusBarColor">@color/guinda_primary_variant_dark</item>
+        <item name="android:windowLightStatusBar">false</item>
+
+        <!-- Colores específicos del juego -->
+        <item name="cardBackColor">@color/card_back_dark</item>
+        <item name="matchedCardColor">@color/matched_card_dark</item>
+        <item name="wrongMatchColor">@color/wrong_match_dark</item>
+    </style>
+
+    <!-- Tema Azul (ESCOM) - Modo Claro -->
+    <style name="Theme.MemorIPN.Azul.Light" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/azul_primary</item>
+        <item name="colorPrimaryVariant">@color/azul_primary_variant</item>
+        <item name="colorOnPrimary">@color/azul_on_primary</item>
+        <item name="colorSecondary">@color/azul_secondary</item>
+        <item name="colorOnSecondary">@color/azul_on_secondary</item>
+        <item name="android:colorBackground">@color/azul_background</item>
+        <item name="colorSurface">@color/azul_surface</item>
+        <item name="colorOnBackground">@color/azul_on_background</item>
+        <item name="colorOnSurface">@color/azul_on_surface</item>
+        <item name="colorError">@color/azul_error</item>
+
+        <item name="android:statusBarColor">@color/azul_primary_variant</item>
+        <item name="android:windowLightStatusBar">false</item>
+
+        <!-- Colores específicos del juego -->
+        <item name="cardBackColor">@color/card_back</item>
+        <item name="matchedCardColor">@color/matched_card</item>
+        <item name="wrongMatchColor">@color/wrong_match</item>
+    </style>
+
+    <!-- Tema Azul (ESCOM) - Modo Oscuro -->
+    <style name="Theme.MemorIPN.Azul.Dark" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/azul_primary_dark</item>
+        <item name="colorPrimaryVariant">@color/azul_primary_variant_dark</item>
+        <item name="colorOnPrimary">@color/azul_on_primary_dark</item>
+        <item name="colorSecondary">@color/azul_secondary_dark</item>
+        <item name="colorOnSecondary">@color/azul_on_secondary_dark</item>
+        <item name="android:colorBackground">@color/azul_background_dark</item>
+        <item name="colorSurface">@color/azul_surface_dark</item>
+        <item name="colorOnBackground">@color/azul_on_background_dark</item>
+        <item name="colorOnSurface">@color/azul_on_surface_dark</item>
+
+        <item name="android:statusBarColor">@color/azul_primary_variant_dark</item>
+        <item name="android:windowLightStatusBar">false</item>
+
+        <!-- Colores específicos del juego -->
+        <item name="cardBackColor">@color/card_back_dark</item>
+        <item name="matchedCardColor">@color/matched_card_dark</item>
+        <item name="wrongMatchColor">@color/wrong_match_dark</item>
+    </style>
+
+    <!-- Atributos personalizados para el juego -->
+    <declare-styleable name="GameTheme">
+        <attr name="cardBackColor" format="color" />
+        <attr name="matchedCardColor" format="color" />
+        <attr name="wrongMatchColor" format="color" />
+    </declare-styleable>
+</resources>
