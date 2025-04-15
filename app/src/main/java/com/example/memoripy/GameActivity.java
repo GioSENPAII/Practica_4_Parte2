@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.os.SystemClock;
 import android.view.View;
 import android.widget.Button;
@@ -187,22 +188,22 @@ public class GameActivity extends AppCompatActivity implements CardAdapter.OnCar
         // En una implementación real, usaría recursos reales
         // Para este ejemplo, usaremos IDs ficticios
         int[] imageResources = {
-                R.drawable.ic_launcher_foreground, // Imagen de placeholder
-                R.drawable.ic_launcher_foreground, // Imagen de placeholder
-                R.drawable.ic_launcher_foreground, // Imagen de placeholder
-                R.drawable.ic_launcher_foreground, // Imagen de placeholder
-                R.drawable.ic_launcher_foreground, // Imagen de placeholder
-                R.drawable.ic_launcher_foreground, // Imagen de placeholder
-                R.drawable.ic_launcher_foreground, // Imagen de placeholder
-                R.drawable.ic_launcher_foreground, // Imagen de placeholder
-                R.drawable.ic_launcher_foreground, // Imagen de placeholder
-                R.drawable.ic_launcher_foreground, // Imagen de placeholder
-                R.drawable.ic_launcher_foreground, // Imagen de placeholder
-                R.drawable.ic_launcher_foreground, // Imagen de placeholder
-                R.drawable.ic_launcher_foreground, // Imagen de placeholder
-                R.drawable.ic_launcher_foreground, // Imagen de placeholder
-                R.drawable.ic_launcher_foreground, // Imagen de placeholder
-                R.drawable.ic_launcher_foreground  // Imagen de placeholder
+                R.drawable.imagen1,
+                R.drawable.imagen2,
+                R.drawable.imagen3,
+                R.drawable.imagen4,
+                R.drawable.imagen5,
+                R.drawable.imagen6,
+                R.drawable.imagen7,
+                R.drawable.imagen8,
+                R.drawable.imagen9,
+                R.drawable.imagen10,
+                R.drawable.imagen11,
+                R.drawable.imagen12,
+                R.drawable.imagen13,
+                R.drawable.imagen14,
+                R.drawable.imagen15,
+                R.drawable.imagen16
         };
 
         // Crear pares de tarjetas
@@ -568,7 +569,7 @@ public class GameActivity extends AppCompatActivity implements CardAdapter.OnCar
      * Verifica si las dos tarjetas seleccionadas forman pareja
      */
     private void checkForMatch() {
-        final Handler handler = new Handler();
+        final Handler handler = new Handler(Looper.getMainLooper());
 
         // Esperar un momento para que el jugador vea la segunda tarjeta
         handler.postDelayed(new Runnable() {
