@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,19 +17,51 @@ import com.example.memoripy.utils.ThemeManager;
 public class MainActivity extends AppCompatActivity {
 
     private ThemeManager themeManager;
+    private TextView tvTitle;
+    private ImageView imgLogo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // Aplicar tema antes de inflar la vista
         themeManager = ThemeManager.getInstance(this);
         themeManager.applyTheme(this);
-        themeManager.initializeTheme();
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Inicializar elementos de UI
+        tvTitle = findViewById(R.id.tvTitle);
+        imgLogo = findViewById(R.id.imgLogo);
+
         // Inicializar botones y eventos
         setupButtons();
+
+        // Inicializar el tema
+        themeManager.initializeTheme();
+
+        // Actualizar elementos visuales según el tema
+        updateThemeUI();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // Verificar si el tema ha cambiado
+        updateThemeUI();
+    }
+
+    /**
+     * Actualiza los elementos visuales según el tema
+     */
+    private void updateThemeUI() {
+        String currentTheme = themeManager.getCurrentTheme();
+
+        // Si se necesitan ajustes específicos para cada tema, se pueden hacer aquí
+        if (ThemeManager.THEME_GUINDA.equals(currentTheme)) {
+            // Configuración específica para tema Guinda (opcional)
+        } else if (ThemeManager.THEME_AZUL.equals(currentTheme)) {
+            // Configuración específica para tema Azul (opcional)
+        }
     }
 
     private void setupButtons() {

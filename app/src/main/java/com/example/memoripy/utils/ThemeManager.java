@@ -7,6 +7,8 @@ import android.util.Log;
 
 import androidx.appcompat.app.AppCompatDelegate;
 
+import com.example.memoripy.R;
+
 /**
  * Clase para gestionar los temas de la aplicación
  */
@@ -82,23 +84,25 @@ public class ThemeManager {
         // Aquí se configura el tema basado en el valor actual
         if (THEME_GUINDA.equals(currentTheme)) {
             if (isDarkMode) {
-                context.setTheme(androidx.appcompat.R.style.Theme_AppCompat_DayNight);
-                // En una implementación real, usaríamos:
-                // context.setTheme(R.style.Theme_MemorIPN_Guinda_Dark);
+                context.setTheme(R.style.Theme_MemorIPN_Guinda_Dark);
             } else {
-                context.setTheme(androidx.appcompat.R.style.Theme_AppCompat_DayNight);
-                // En una implementación real, usaríamos:
-                // context.setTheme(R.style.Theme_MemorIPN_Guinda_Light);
+                context.setTheme(R.style.Theme_MemorIPN_Guinda_Light);
             }
+            Log.d(TAG, "Aplicando tema Guinda - " + (isDarkMode ? "Oscuro" : "Claro"));
         } else if (THEME_AZUL.equals(currentTheme)) {
             if (isDarkMode) {
-                context.setTheme(androidx.appcompat.R.style.Theme_AppCompat_DayNight);
-                // En una implementación real, usaríamos:
-                // context.setTheme(R.style.Theme_MemorIPN_Azul_Dark);
+                context.setTheme(R.style.Theme_MemorIPN_Azul_Dark);
             } else {
-                context.setTheme(androidx.appcompat.R.style.Theme_AppCompat_DayNight);
-                // En una implementación real, usaríamos:
-                // context.setTheme(R.style.Theme_MemorIPN_Azul_Light);
+                context.setTheme(R.style.Theme_MemorIPN_Azul_Light);
+            }
+            Log.d(TAG, "Aplicando tema Azul - " + (isDarkMode ? "Oscuro" : "Claro"));
+        } else {
+            // Si por alguna razón no hay un tema válido, usar el tema por defecto
+            Log.w(TAG, "Tema no reconocido: " + currentTheme + ", usando tema por defecto (Guinda)");
+            if (isDarkMode) {
+                context.setTheme(R.style.Theme_MemorIPN_Guinda_Dark);
+            } else {
+                context.setTheme(R.style.Theme_MemorIPN_Guinda_Light);
             }
         }
     }

@@ -1,5 +1,6 @@
 package com.example.memoripy;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -29,12 +30,16 @@ public class SettingsActivity extends AppCompatActivity {
     private Button btnSaveSettings;
 
     private ThemeManager themeManager;
+    private String originalTheme;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // Aplicar tema antes de inflar la vista
         themeManager = ThemeManager.getInstance(this);
         themeManager.applyTheme(this);
+
+        // Guardar el tema original para saber si cambió
+        originalTheme = themeManager.getCurrentTheme();
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
@@ -109,6 +114,8 @@ public class SettingsActivity extends AppCompatActivity {
         } else {
             selectedTheme = ThemeManager.THEME_AZUL;
         }
+
+        boolean themeChanged = !selectedTheme.equals(originalTheme);
         themeManager.setTheme(selectedTheme);
 
         // Guardar formato de archivo predeterminado
@@ -130,7 +137,15 @@ public class SettingsActivity extends AppCompatActivity {
         // Mostrar mensaje de confirmación
         Toast.makeText(this, "Configuración guardada", Toast.LENGTH_SHORT).show();
 
-        // Para que el cambio de tema sea visible, recreamos la actividad
-        recreate();
+        if (themeChanged) {
+            // Si el tema cambió, reiniciar la aplicación para aplicar el nuevo tema
+            Intent intent = new Intent(this, MainActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+            finish();
+        } else {
+            // Solo recrear esta actividad si el tema no cambió
+            recreate();
+        }
     }
 }
