@@ -255,17 +255,33 @@ Pareja encontrada: 1 (+20 puntos)
 
 ## Capturas de Pantalla  
 
-- **Menu y mapa principal**
-![Imagen 1](assets/1.png)
-![Imagen 2](assets/2.png)
+- **Pantalla principal con temas y schemes diferentes**
+![Imagen 1](assets/1.jpeg)
+![Imagen 2](assets/2.jpeg)
+![Imagen 3](assets/3.jpeg)
 
-- **Cambio de mapas**
-![Imagen 3](assets/3.png)
+- **Pantalla de configuración**
+![Imagen 4](assets/4.jpeg)
   
-- **Interacción con puntos de interés**  
-![Imagen 4](assets/4.png)
-![Imagen 5](assets/5.png)
-![Imagen 6](assets/6.png)
+- **Juego en ejecución**  
+![Imagen 5](assets/5.jpeg)
+![Imagen 6](assets/6.jpeg)
+
+- **Pausado de juego**
+![Imagen 7](assets/7.jpeg)
+
+- **Pantalla de guardado de juego**
+![Imagen 8](assets/8.jpeg)
+
+- **Pantalla de lista de juegos guardados**
+![Imagen 9](assets/9.jpeg)
+
+- **Pantalla de lista de juegos guardados**
+![Imagen 11](assets/11.jpeg)
+
+- **Pantalla de juego completado**
+![Imagen 10](assets/10.jpeg)
+
 
 ## Agradecimientos
 - A la comunidad Android por sus recursos y bibliotecas
