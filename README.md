@@ -249,12 +249,23 @@ Pareja encontrada: 1 (+20 puntos)
 4. Sube tus cambios (`git push origin nueva-funcionalidad`)
 5. Crea un Pull Request
 
-## Licencia
-Este proyecto está disponible bajo la licencia MIT. Consulta el archivo LICENSE para más detalles.
-
 ## Equipo de desarrollo
 - Desarrollado por estudiantes del IPN-ESCOM
 - Contacto: [glongoria.3a.is@gmail.com]
+
+## Capturas de Pantalla  
+
+- **Menu y mapa principal**
+![Imagen 1](assets/1.png)
+![Imagen 2](assets/2.png)
+
+- **Cambio de mapas**
+![Imagen 3](assets/3.png)
+  
+- **Interacción con puntos de interés**  
+![Imagen 4](assets/4.png)
+![Imagen 5](assets/5.png)
+![Imagen 6](assets/6.png)
 
 ## Agradecimientos
 - A la comunidad Android por sus recursos y bibliotecas
